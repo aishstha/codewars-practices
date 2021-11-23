@@ -17,10 +17,9 @@ Don't forget the space after the closing parenthese!
 function createPhoneNumber(numbers){
   var format = "(xxx) xxx-xxxx";
   
-  for(var i = 0; i < numbers.length; i++)
-  {
-    format = format.replace('x', numbers[i]);
-  }
+  numbers.forEach(element => {
+        format = format.replace('x', element);
+  })
   
   return format;
 }
